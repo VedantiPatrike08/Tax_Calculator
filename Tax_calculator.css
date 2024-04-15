@@ -1,0 +1,158 @@
+body, html {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .content {
+    width: 400px; 
+    border: 2px solid #ccc;
+    padding: 30px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .input-field {
+    width: 100%;
+    padding: 5px;
+  }
+  
+  .submit-button {
+    width: 100%;
+    background-color: #4b06f8;
+    border: none;
+    padding: 5px;
+
+  }
+  
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    text-align: center;
+  }
+  
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+ 
+
+  .tooltip {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%; /* Circle shape */
+    border: solid;
+    border-color: white;
+    /* background-color: #ccc; */
+    text-align: center;
+    line-height: 15px;
+    margin-left: 5px; /* Add some space between label and tooltip */
+    cursor: pointer;
+    position: relative;
+  }
+  
+/* Tooltip text on hover */
+.tooltip:hover:before {
+  content: attr(data-tooltip); /* Display tooltip text */
+  background-color: black;
+  color: white;
+  position: absolute;
+  bottom: calc(100% + 10px); /* Adjust tooltip position */
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px 10px; /* Adjust padding */
+  border-radius: 5px;
+  white-space: normal; /* Allow tooltip text to wrap */
+  max-width: 200px; /* Adjust maximum width of tooltip */
+  text-align: center; /* Center-align the tooltip text */
+}
+
+
+/* CSS for input container */
+.input-container {
+  position: relative;
+  
+}
+
+/* CSS for input field */
+.input-field {
+  width: calc(100% - 30px); /* Adjust width to accommodate the error icon */
+  padding: 5px;
+}
+
+
+.error-icon {
+  color: red;
+  width: 20px; /* Adjust size as needed */
+  height: 20px; /* Adjust size as needed */
+  text-align: center;
+  line-height: 20px; /* Adjust line-height to center vertically */
+  border-radius: 50%; /* Make it a circle */
+}
+
+
+.error-icon.error {
+  cursor: pointer;
+  position: absolute;
+  top: 39%;
+  right: 500px; /* Adjust distance from the right side */
+  transform: translateY(-50%);
+  width: 20px; /* Adjust size as needed */
+  height: 20px; /* Adjust size as needed */
+  text-align: center;
+  line-height: 20px; /* Should match height for vertical centering */
+  border: 2px solid red; /* Border color and thickness */
+  border-radius: 50%; /* Make it a circle */
+  box-sizing: border-box; /* Include border in width and height calculations */
+}
+
+.input-field.error {
+  border-color: red; /* Change border color for input field with error */
+}
+
+.error-icon {
+  color: red;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  right: 10px; /* Adjust position of error icon */
+  top: 50%; /* Adjust position of error icon */
+  transform: translateY(-50%); /* Adjust position of error icon */
+}
